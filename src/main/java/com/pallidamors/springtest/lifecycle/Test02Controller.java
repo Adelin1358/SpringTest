@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping("/lifecycle/test02")
 
 @RestController
-public class test02Controller {
+public class Test02Controller {
 
     @RequestMapping("/1")
     public List<Map<String, Object>> listResponse(){

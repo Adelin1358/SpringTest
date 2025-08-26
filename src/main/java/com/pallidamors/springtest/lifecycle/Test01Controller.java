@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class test01Controller {
+public class Test01Controller {
 
     @RequestMapping("/lifecycle/test01/1")
     @ResponseBody
