@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>test01</title>
+</head>
+<body>
+    <!-- 1. 변수 -->
+    <h2> 1. 변수</h2>
+    <th:block th:with="number1=36 , number2=3">
+        <h3 th:text="|첫번째 숫자 : ${number1}|"></h3>
+        <h3 th:text="|두번째 숫자 : ${number2}|"></h3><br>
+
+    <!-- 2. 산술 연산  -->
+        <h3 th:text="|더하기 : ${number1+number2}|"></h3>
+        <h3 th:text="|빼기 : ${number1 - number2}|"></h3>
+        <h3 th:text="|곱하기 : ${number1*number2}|"></h3>
+        <h3 th:text="|나누기 : ${number1/number2}|"></h3>
+
+    <!--  if와 unless  -->
+        <div th:with= "avg = (${number1 + number2}) / 2.0">
+            <h1 th:if="${avg >= 10}" th:text="${avg}"></h1>
+            <!--  th:unless 에 false인 경우 해당태그가 포함(랜더링)된다.      -->
+            <h3 th:unless="${avg >= 10}" th:text="${avg}"></h3>
+        </div>
+
+    </th:block>
+    <!--  3. 태그 그대로 표현  -->
+    <!-- html escape   -->
+    <div th:utext="'<b>안녕하세요</b>'"></div>
+</body>
+</html>

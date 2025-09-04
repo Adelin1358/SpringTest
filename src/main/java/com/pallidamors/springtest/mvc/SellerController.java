@@ -32,9 +32,15 @@ public class SellerController {
     }
 
     @GetMapping("/mvc/seller/info")
-    public String sellerInfo(Model model){
-        //가장 최근 등록된 판매자 정보
-        Seller seller = sellerService.getLastSeller();
+    public String sellerInfo(Model model, @RequestParam(value = "id",required = false) Integer id){
+//        //가장 최근 등록된 판매자 정보
+        Seller seller = new Seller();
+
+        if( id == null ){
+            seller = sellerService.getLastSeller();
+        }else{
+            seller = sellerService.getSellerById(id);
+        }
         model.addAttribute("result",seller);
         return "mvc/sellerInfo";
     }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>공인중개사 추가</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+    <h3>공인중개사 추가</h3>
+    <form method="post" action="/mvc/realtor/add">
+        <label>상호명</label><br>
+        <input type="text" name="office" class="form-control col-6"><br>
+        <label>전화번호</label><br>
+        <input type="text" name="phoneNumber" class="form-control col-6"><br>
+        <label>주소</label><br>
+        <input type="text" name="address" class="form-control col-6"><br>
+        <label>등급</label><br>
+        <input type="text" name="grade" class="form-control col-6" placeholder="일반 중개사, 안심 중개사, 프리미엄 중개사"><br>
+        <button type="submit" class="btn btn-success">추가</button>
+    </form>
+</body>
+</body>
+</html>

@@ -7,8 +7,8 @@
 </head>
 <body>
     <h3>판매자 정보</h3>
-    <img th:src="${result.profileImage}">
-    <div th:text="${result.nickname}">최근 판매자</div>
+    <img width="300" th:src="${result.profileImage}">
+    <div class="display-4" th:text="${result.nickname}">최근 판매자</div>
     <div th:text="${result.temperature}">판매자 온도</div>
 </body>
 </html>

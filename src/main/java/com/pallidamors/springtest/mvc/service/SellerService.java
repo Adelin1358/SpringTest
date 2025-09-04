@@ -22,9 +22,15 @@ public class SellerService {
         return count;
     }
 
+
     //가장 최근에 등록한  정보 얻어오기
     public Seller getLastSeller(){
        Seller seller = sellerRepository.selectLastSeller();
        return seller;
+    }
+
+    public Seller getSellerById(int id){
+        Seller seller = sellerRepository.selectSellerById(id);
+        return seller;
     }
 }

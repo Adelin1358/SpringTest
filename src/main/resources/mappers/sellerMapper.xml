@@ -33,4 +33,19 @@
             `id` DESC
             LIMIT 1
     </select>
+
+    <select id="selectSellerById" parameterType="int"
+            resultType="com.pallidamors.springtest.mvc.domain.Seller">
+        SELECT
+            `id`
+             ,`nickname`
+             ,`temperature`
+             ,`profile_image`
+             ,`created_at`
+             ,`updated_at`
+        FROM
+            `seller`
+        WHERE
+            `id`=#{id}
+    </select>
 </mapper>
